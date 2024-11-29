@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">.
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body class="body">
+   <!-- ===============menu superior================= -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark align-items-center">
+          <a href="index.html" class="nav__logo text-success">
+              <i class="bi bi-shop text-success"></i> e-commerce</a>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarCollapse">
+          <ul class="navbar-nav mx-auto ">
+            <li class="nav-item active px-4">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(atual)</span></a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href=# onclick="selectMenu('Shop')">Shop</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href=# onclick="selectMenu('faq')">FAQ</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href=# onclick="selectMenu('contact')">Contact</a>
+            </li>
+          </ul>
+        </div>
+          
+          <div class="nav__btns " type="button">
+              <div class="cart__toggle nav-link text-success"   id="cart-toggle">
+                  <i class="bi bi-bag bg-dark" data-bs-toggle="modal" data-bs-target="#cartModal"> Cart</i>
+              </div>
+                <div class="login__toggle nav-link text-success" id="login-toggle">
+                  <i class="bi bi-person" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
+              </div>
+          </div>
+      </nav>
+    </header>
+
+    <!-- ===============sidebar carrinho================= -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-right"> <!-- Alinhado à direita -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Conteúdo do Carrinho -->
+              <ul class="list-group">
+                <!-- <li class="list-group-item">Produto 1 - R$ 50,00</li>
+                <li class="list-group-item">Produto 2 - R$ 30,00</li>
+                <!-- Adicione itens do carrinho aqui -->
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" onclick="finalizarCompra()">Finalizar Compra</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- ===============sidebar login================= -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-right"> <!-- Alinhado à direita -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Conteúdo do Carrinho -->
+              <ul class="list-group">
+                <li class="list-group-item">Usuário</li>
+                <li class="list-group-item">Senha</li>
+                 <li class="list-group-item">Esqueci a Senha</li>
+                <!-- Adicione itens do carrinho aqui -->
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Entrar</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    <!-- =============== Ofertas ================= -->
+    <main role="main">
+
+      <div id="myCarousel" class="carousel slide mb-5" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="images/banner1.jpg" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1 class="text-border">Saiba mais sobre nossa história</h1>
+                <h3 class="text-border">Desde 1980 trazendo qualidade e sabor em nossos vinhos, acesse o link para ouvir um pouco sobre nós.</h3>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Quem somos nós?</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="images/banner2.jpg" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1 class="text-border">Cadastre-se para receber ofertas</h1>
+                <h3 class="text-border">Faça o cadastro na nossa loja para receber ofertas e cupons exclusivos.</h3>
+                <p><a class="btn btn-lg btn-primary" href="#" role="Cadastro">Cadastre-se</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide img-fluid" src="images/banner3.jpg" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1 class="text-border">Etapas de produção do vinho tinto</h1>
+                <h3 class="text-border">Tem curiosidade de saber quais são as etapas de produção do vinho tinto? Acesse o link e descubra mais.</h3>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sobre o Vinho Tinto</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="fourth-slide" src="images/banner4.png" alt="Fourth slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1 class="text-border">Confira os vinhos da nossa loja virtual</h1>
+                <h3 class="text-border">Acesse o link para a loja virtual ou navegue para a seção shop.</h3>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Shop</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="fifth-slide" src="images/banner5.png" alt="Fifth slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1 class="text-border">Venha nos fazer uma visita</h1>
+                <h3 class="text-border">Agende sua visita e faça a degustação dos diferentes tipos de vinhos da casa e viva uma experiência exclusiva.</h3>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Agende sua visita</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Voltar</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Avançar</span>
+        </a>
+      </div>
+
+      
+      <!-- =============== Shop ================= -->
+      <br><br><br><br><br>
+      <div class="shop">
+      <h3 class="text-center mt-5">Nossos Vinhos</h3>
+      <div class="carousel-container my-5">
+        <button class="carousel-control prev" onclick="scrollCarousel(-1)">&#10094;</button>
+        <div class="carouselshop">
+          <!-- Produtos serão inseridos aqui dinamicamente -->
+        </div>
+        <button class="carousel-control next" onclick="scrollCarousel(1)">&#10095;</button>
+      </div>
+
+      </div>
+      
+      <!-- =============== howto buy ================= -->
+      <section class="steps section" ><br><br><br><br><br><br><br>
+        <div class="steps_bg  container">
+            <h2 class="selection_title text-center">Como Realizar a Compra </h2>
+           
+            <div class="steps_container grid row p-2 gx-0">
+                <div class="steps_card col-sm border">
+                    <div class="steps_card-number">01</div>
+                    <h3 class="steps_card-title">Escolha o Produto</h3>
+                    <p class="steps_card-description">
+                        Navegue até a área Shop e faça sua escolha.
+                    </p>
+                </div>
+                
+                <div class="steps_card col-sm border">
+                    <div class="steps_card-number">02</div>
+                    <h3 class="steps_card-title">Confira os Produtos</h3>
+                    <p class="steps_card-description">
+                        Selecione o ícone do carrinho para confirir os produtos e as quantidades.
+                    </p>
+                </div>
+                
+                <div class="steps_card col-sm border">
+                    <div class="steps_card-number">03</div>
+                    <h3 class="steps_card-title">Finalize sua Compra</h3>
+                    <p class="steps_card-description">
+                        Finalize sua compra na aba do carrinho de compras e prossiga para a página de pagamento.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      
+        <!-- =============== ? ================= -->
+      <div><br><br><br><br><br>
+      <div class="container mt-5 steps_bg contact">
+        <div class="row">
+            <div class="col-md-4 text-center pt-5">
+                <h3>Entre em Contato</h3>
+                <p>Entre em contato conosco! Tire suas dúvidas ou envie comentários. <br> Realize o cadastro para receber novidades e promoções.</p>
+            </div>
+
+            <div class="col-md-8">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                    
+                
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label for="observacoes" class="form-label">Dúvidas/Comentários</label>
+                            <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                        </div>
+                        
+                    </div>
+                
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      </div>
+      <br><br><br><br>
+      
+
+      
+      <!-- =============== faq ================= -->
+      <div class="faq"><br><br><br><br><br><br>
+        <h2>FAQ - Perguntas Frequentes</h2>
+        <br>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <p>O que é um empréstimo consignado?</p>
+                <span class="seta">➤</span>
+            </div>
+            <div class="faq-answer">
+                <p>O empréstimo consignado é um tipo de crédito onde as parcelas são descontadas diretamente da folha de pagamento ou benefício.</p>
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <p>Qual a diferença entre empréstimo pessoal e consignado?</p>
+                <span class="seta">➤</span>
+            </div>
+            <div class="faq-answer">
+                <p>O empréstimo pessoal possui taxas mais altas e maior flexibilidade. O consignado oferece taxas menores com desconto direto no salário.</p>
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <p>Como simular um empréstimo?</p>
+                <span class="seta">➤</span>
+            </div>
+            <div class="faq-answer">
+                <p>Basta selecionar o tipo de empréstimo, o valor desejado e a quantidade de parcelas. Em seguida, clique no botão para calcular.</p>
+            </div>
+        </div>
+    </div>
+      <br><br><br>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>

@@ -1,0 +1,1257 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2024-11-28T23:35:18.412-03:00  INFO 19152 --- [UCFINAL] [           main] com.projeto.UCFINAL.UcfinalApplication   : Starting UcfinalApplication using Java 18.0.2.1 with PID 19152 (C:\Users\ThinkPad\Downloads\UCFINAL\UCFINAL\target\classes started by ThinkPad in C:\Users\ThinkPad\Downloads\UCFINAL\UCFINAL)
+2024-11-28T23:35:18.417-03:00  INFO 19152 --- [UCFINAL] [           main] com.projeto.UCFINAL.UcfinalApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-11-28T23:35:19.381-03:00  INFO 19152 --- [UCFINAL] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T23:35:19.464-03:00  INFO 19152 --- [UCFINAL] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2024-11-28T23:35:20.339-03:00  INFO 19152 --- [UCFINAL] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-28T23:35:20.362-03:00  INFO 19152 --- [UCFINAL] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T23:35:20.363-03:00  INFO 19152 --- [UCFINAL] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T23:35:20.456-03:00  INFO 19152 --- [UCFINAL] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T23:35:20.457-03:00  INFO 19152 --- [UCFINAL] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1946 ms
+2024-11-28T23:35:20.701-03:00  INFO 19152 --- [UCFINAL] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T23:35:20.771-03:00  INFO 19152 --- [UCFINAL] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T23:35:20.815-03:00  INFO 19152 --- [UCFINAL] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T23:35:21.217-03:00  INFO 19152 --- [UCFINAL] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T23:35:21.256-03:00  INFO 19152 --- [UCFINAL] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T23:35:21.831-03:00  INFO 19152 --- [UCFINAL] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59933644
+2024-11-28T23:35:21.833-03:00  INFO 19152 --- [UCFINAL] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T23:35:23.230-03:00  INFO 19152 --- [UCFINAL] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T23:35:23.362-03:00  INFO 19152 --- [UCFINAL] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T23:35:23.840-03:00  WARN 19152 --- [UCFINAL] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T23:35:23.874-03:00  INFO 19152 --- [UCFINAL] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-11-28T23:35:24.353-03:00  INFO 19152 --- [UCFINAL] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-28T23:35:24.368-03:00  INFO 19152 --- [UCFINAL] [           main] com.projeto.UCFINAL.UcfinalApplication   : Started UcfinalApplication in 6.625 seconds (process running for 7.148)
+2024-11-28T23:35:28.721-03:00  INFO 19152 --- [UCFINAL] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-28T23:35:28.721-03:00  INFO 19152 --- [UCFINAL] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-28T23:35:28.723-03:00  INFO 19152 --- [UCFINAL] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.date,
+        p1_0.endereco,
+        p1_0.nome_comprador 
+    from
+        pedido p1_0
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+2024-11-28T23:36:03.236-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.date,
+        p1_0.endereco,
+        p1_0.nome_comprador 
+    from
+        pedido p1_0
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-28T23:40:52.456-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-11-29T09:09:21.633-03:00  WARN 19152 --- [UCFINAL] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h17m59s463ms97µs999ns).
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T09:33:39.129-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T09:38:01.159-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.date,
+        p1_0.endereco,
+        p1_0.nome_comprador 
+    from
+        pedido p1_0
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T09:41:54.036-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T11:54:51.423-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.date,
+        p1_0.endereco,
+        p1_0.nome_comprador 
+    from
+        pedido p1_0
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.date,
+        p1_0.endereco,
+        p1_0.nome_comprador 
+    from
+        pedido p1_0
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.date,
+        p1_0.endereco,
+        p1_0.nome_comprador 
+    from
+        pedido p1_0
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T12:07:42.927-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T12:08:15.852-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.date,
+        p1_0.endereco,
+        p1_0.nome_comprador 
+    from
+        pedido p1_0
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        pp1_0.pedido_id,
+        pp1_0.id,
+        p2_0.id,
+        p2_0.estoque,
+        p2_0.nome_produto,
+        p2_0.preco,
+        pp1_0.quantidade 
+    from
+        pedido_produto pp1_0 
+    left join
+        produtos p2_0 
+            on p2_0.id=pp1_0.produto_id 
+    where
+        pp1_0.pedido_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T12:11:22.082-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T12:15:00.786-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-11-29T12:15:35.598-03:00  WARN 19152 --- [UCFINAL] [io-8081-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.estoque,
+        p1_0.nome_produto,
+        p1_0.preco 
+    from
+        produtos p1_0
+2024-11-29T12:17:52.536-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-11-29T12:25:14.419-03:00  WARN 19152 --- [UCFINAL] [nio-8081-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
