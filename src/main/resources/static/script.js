@@ -210,6 +210,7 @@ console.log(date);
       alert("Compra realizada com sucesso!");
       carrinho = []; // Limpa o carrinho
       atualizarCarrinhoModal();
+      
     } else {
       alert("Erro ao finalizar a compra. Tente novamente.");
       throw new Error(`Erro HTTP: ${response.status}`);
@@ -220,3 +221,36 @@ console.log(date);
   }
 }
 
+document.querySelector("form").addEventListener("submit", async function(e) {
+    e.preventDefault(); 
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const observacoes = document.getElementById("observacoes").value;
+
+    const contato = {
+        nome: nome,
+        email: email,
+        observacoes: observacoes
+    };
+
+    try {
+        const response = await fetch("http://localhost:8081/api/contatos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(contato)
+        });
+
+        if (response.ok) {
+            alert("Contato cadastrado com sucesso!");
+            document.querySelector("form").reset(); // Limpa o formulário
+        } else {
+            alert("Erro ao cadastrar contato.");
+        }
+    } catch (error) {
+        console.error("Erro na requisição:", error);
+        alert("Falha ao se conectar ao servidor.");
+    }
+});
