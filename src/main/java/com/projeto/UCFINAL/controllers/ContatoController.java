@@ -34,7 +34,7 @@ public class ContatoController {
     contato.setObservacoes(contatoDTO.getObservacoes());
 
     contatoRepository.save(contato);
-    return ResponseEntity.ok("Menságem enviada com sucesso!");
+    return ResponseEntity.ok("Mensagem enviada com sucesso!");
 }
 
 }
