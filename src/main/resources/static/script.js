@@ -244,7 +244,7 @@ document.querySelector("form").addEventListener("submit", async function(e) {
         });
 
         if (response.ok) {
-            alert("Contato cadastrado com sucesso!");
+            alert("Mensagem enviada com sucesso!");
             document.querySelector("form").reset(); // Limpa o formulário
         } else {
             alert("Erro ao cadastrar contato.");
